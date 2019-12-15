@@ -10,14 +10,14 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class MainActivity extends AppCompatActivity {
+public class SnackBarActivity extends AppCompatActivity {
     private AppCompatButton btn_snackbar;
     private ConstraintLayout activity_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_snack_bar);
         activity_main = findViewById(R.id.activity_main);
         btn_snackbar = findViewById(R.id.btn_snackbar);
         btn_snackbar.setOnClickListener(new View.OnClickListener() {
@@ -33,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
                 .setAction("点击事件", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(MainActivity.this, "SnackBar被点击!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SnackBarActivity.this, "SnackBar被点击!", Toast.LENGTH_SHORT).show();
                     }
                 })
+//                .setText()//设置要显示的文本
 //                .setDuration(2500)//snackbar弹出的持续时间
                 .show();
 
